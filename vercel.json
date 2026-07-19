@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/build/$1"
+    }
+  ],
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "@backend_api_url",
+      "REACT_APP_SOCKET_URL": "@backend_socket_url",
+      "REACT_APP_ENV": "production"
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}
