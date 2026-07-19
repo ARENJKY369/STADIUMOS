@@ -1,4 +1,4 @@
--- Supabase clean schema - drops existing types/tables first
+-- Supabase Compatible - Full Clean Schema - Fixes 42710 type already exists
 DROP TABLE IF EXISTS audit_logs CASCADE;
 DROP TABLE IF EXISTS analytics_snapshots CASCADE;
 DROP TABLE IF EXISTS tickets CASCADE;
@@ -38,7 +38,6 @@ CREATE TYPE zone_status AS ENUM ('open', 'closed', 'restricted', 'evacuation', '
 CREATE TYPE notification_type AS ENUM ('info', 'warning', 'critical', 'emergency', 'update');
 CREATE TYPE event_status AS ENUM ('scheduled', 'live', 'halftime', 'completed', 'cancelled', 'postponed');
 CREATE TYPE sustainability_category AS ENUM ('transport', 'waste', 'energy', 'water', 'food');
--- Then create tables (minimal version for quick deploy)
 CREATE TABLE users (id UUID PRIMARY KEY DEFAULT uuid_generate_v4(), email VARCHAR(255) UNIQUE NOT NULL, password_hash VARCHAR(255) NOT NULL, first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, role user_role NOT NULL DEFAULT 'staff', is_active BOOLEAN DEFAULT TRUE, is_verified BOOLEAN DEFAULT FALSE, created_at TIMESTAMPTZ DEFAULT NOW(), updated_at TIMESTAMPTZ DEFAULT NOW());
 CREATE TABLE stadiums (id UUID PRIMARY KEY DEFAULT uuid_generate_v4(), name VARCHAR(255) NOT NULL, city VARCHAR(100) NOT NULL, capacity INTEGER NOT NULL CHECK (capacity > 0), created_at TIMESTAMPTZ DEFAULT NOW(), updated_at TIMESTAMPTZ DEFAULT NOW());
 CREATE TABLE events (id UUID PRIMARY KEY DEFAULT uuid_generate_v4(), stadium_id UUID NOT NULL REFERENCES stadiums(id) ON DELETE CASCADE, name VARCHAR(255) NOT NULL, start_time TIMESTAMPTZ NOT NULL, status event_status DEFAULT 'scheduled', expected_attendance INTEGER, created_at TIMESTAMPTZ DEFAULT NOW(), updated_at TIMESTAMPTZ DEFAULT NOW());
