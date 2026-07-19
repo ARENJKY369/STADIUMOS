@@ -1,8 +1,20 @@
-# FIFA World Cup 2026 - Stadium Operations AI Platform (StadiumOS)
+<p align="center">
+  <img src="docs/images/logo.png" alt="StadiumOS Logo" width="200" height="200"/>
+</p>
 
-Production-ready GenAI-powered stadium operations system for 100K+ concurrent fans across 16 host cities.
+<h1 align="center">FIFA World Cup 2026 - Stadium Operations AI Platform</h1>
+<h2 align="center">StadiumOS</h2>
 
-**Total Project: 15,000 LOC | 12 Weeks | 8-10 Developers | Production Ready**
+<p align="center">
+  <strong>Production-ready GenAI-powered stadium operations system for 100K+ concurrent fans across 16 host cities.</strong><br>
+  <strong>Total Project: 15,000 LOC | 12 Weeks | 8-10 Developers | Production Ready</strong>
+</p>
+
+<p align="center">
+  <a href="https://ARENJKY369.github.io/STADIUMOS/"><img src="https://img.shields.io/badge/Live%20Demo-Public%20App-2563eb?style=for-the-badge" alt="Live Demo"/></a>
+  <a href="https://github.com/ARENJKY369/STADIUMOS"><img src="https://img.shields.io/badge/GitHub-Repository-0f172a?style=for-the-badge&logo=github" alt="GitHub"/></a>
+  <img src="https://img.shields.io/badge/Built%20With-AI%20%2B%20Stadium%20Tech-10b981?style=for-the-badge" alt="Built With"/>
+</p>
 
 ## 🎯 Project Overview
 
