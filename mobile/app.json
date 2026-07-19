@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "StadiumOS",
+    "slug": "stadium-operations",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "updates": { "fallbackToCacheTimeout": 0 },
+    "assetBundlePatterns": ["**/*"],
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.fifa2026.stadiumops" },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0f172a" }, "package": "com.fifa2026.stadiumops" },
+    "web": { "favicon": "./assets/favicon.png" },
+    "extra": { "apiUrl": "http://localhost:5000/api/v1", "socketUrl": "http://localhost:5000" },
+    "plugins": [
+      ["expo-location", { "locationAlwaysAndWhenInUsePermission": "Allow StadiumOS to use your location for navigation and safety." }],
+      ["expo-notifications", { "icon": "./assets/icon.png", "color": "#2563eb" }]
+    ]
+  }
+}

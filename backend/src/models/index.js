@@ -1,0 +1,16 @@
+module.exports = {
+  users: require('./users'),
+  stadiums: require('./stadiums'),
+  events: require('./events'),
+  zones: require('./zones'),
+  crowdMetrics: require('./crowd_metrics'),
+  incidents: require('./incidents'),
+  staff: require('./staff'),
+  staffAssignments: require('./staff_assignments'),
+  notifications: require('./notifications'),
+  chatMessages: require('./chat_messages'),
+  sustainabilityMetrics: require('./sustainability_metrics'),
+  tickets: require('./tickets'),
+  analyticsSnapshots: require('./analytics_snapshots'),
+  auditLogs: require('./audit_logs'),
+};
